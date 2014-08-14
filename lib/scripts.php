@@ -73,6 +73,13 @@ function nuclear_twitter_init() { ?>
 <?php }
 add_action('wp_footer', 'nuclear_twitter_init', 50);
 
+function nuclear_favicon() { ?>
+  
+  <link rel="shortcut icon" href="<?php echo THEME_URL; ?>/favicon.ico" />
+
+<?php } 
+add_action('wp_head', 'nuclear_favicon', 0);
+
 /*!
  * Shim responsive for old browser
  */

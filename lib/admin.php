@@ -1,6 +1,6 @@
 <?php
 
-function ccleanup_dashboard()
+function nuclear_cleanup_dashboard()
 {
 	remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'core' );
 	remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'core' );

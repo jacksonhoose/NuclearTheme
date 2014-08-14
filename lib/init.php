@@ -33,7 +33,11 @@ function nuclear_theme_support()
 function nuclear_image_sizes()
 {
 	set_post_thumbnail_size(125, 125, true);
-	// add_image_size('nuclear_large', 700, 350, true);
+	
+	/*!
+	 * add additional image sizes
+	 * add_image_size('nuclear_large', 700, 350, true);
+	 */
 }
 
 function nuclear_register_menus()
@@ -46,7 +50,9 @@ function nuclear_register_menus()
 
 function nuclear_post_types()
 {
-	
+	/*!
+	 * register post types here
+	 */
 }
 
 function nuclear_cleanup_head()

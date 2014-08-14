@@ -44,7 +44,7 @@ $total-columns: 12;
 
 // We use these to control various global styles
 $body-bg: $white;
-$body-font-color: $white;
+$body-font-color: $black;
 $body-font-family: sans-serif;
 $body-font-weight: normal;
 $body-font-style: normal;
@@ -121,7 +121,7 @@ $include-html-type-classes: $include-html-classes;
 $header-font-family: $body-font-family;
 $header-font-weight: normal;
 $header-font-style: normal;
-$header-font-color: $white;
+$header-font-color: $black;
 $header-line-height: 1.4;
 $header-top-margin: .2rem;
 $header-bottom-margin: .5rem;
