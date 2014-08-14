@@ -1,0 +1,29 @@
+{
+  "name": "Nuclear-Theme",
+  "version": "0.0.0",
+  "description": "A wordpress starter theme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jacksonhoose/nuclear-theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacksonhoose/nuclear-theme/issues"
+  },
+  "homepage": "https://github.com/jacksonhoose/nuclear-theme",
+  "devDependencies": {
+    "gulp": "~3.8.6",
+    "gulp-watch": "~0.6.8",
+    "gulp-uglify": "~0.3.1",
+    "gulp-concat": "~2.3.3",
+    "gulp-imagemin": "~0.6.1",
+    "gulp-compass": "~1.1.9",
+    "gulp-minify-css": "~0.3.6",
+    "imagemin-pngcrush": "~0.1.0",
+    "gulp-image": "~0.4.2"
+  }
+}
