@@ -9,6 +9,7 @@ function nuclear_after_setup()
 	add_action('init', 'nuclear_post_types');
 
 	nuclear_theme_support();
+	nuclear_image_sizes();
 }
 
 function nuclear_theme_support()
@@ -27,9 +28,12 @@ function nuclear_theme_support()
 		'audio',
 		'chat'
 	]);
+}
 
+function nuclear_image_sizes()
+{
 	set_post_thumbnail_size(125, 125, true);
-
+	// add_image_size('nuclear_large', 700, 350, true);
 }
 
 function nuclear_register_menus()
