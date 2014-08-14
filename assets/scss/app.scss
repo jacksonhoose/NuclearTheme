@@ -1,23 +1,47 @@
+/*!
+ * Import Libraries
+ */
 @import "compass/css3";
+@import "breakpoint";
+
+/*!
+ * import CSS reset via bower
+ */
 @import "../bower_components/normalize-css/normalize.css";
+
+/*!
+ * project variables and mixins
+ */
 @import "variables";
 @import "mixins";
+
+/*!
+ * foundation importers
+ */
 @import "lib/foundation_variables";
 @import "lib/foundation";
 
+/*!
+ * sitewide / non specific styles
+ */
 @import "utility";
 @import "global";
 @import "wordpress";
 
-@import "typography";
-@import "structure";
+/*!
+ * component styles 
+ * ie. site styles for global components
+ */
+@import "components/typography";
+@import "components/structure";
+@import "components/header";
+@import "components/footer";
+@import "components/nav";
+@import "components/button";
 
 /*!
- * Template Parts
+ * Template specific styles
  */
-@import "header";
-@import "nav";
-@import "button";
 @import "template/tag";
 @import "template/archive";
 @import "template/post";
@@ -25,11 +49,8 @@
 @import "template/category";
 @import "template/front-page";
 @import "template/page";
-@import "shared/contact-form";
 
-
+/*!
+ * other media styles
+ */
 @import "print";
-
-body {
-	color:red;
-}

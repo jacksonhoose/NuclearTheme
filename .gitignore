@@ -2,3 +2,5 @@ Gemfile.lock
 .DS_Store
 .sass-cache
 node_modules
+.bundle
+assets/css/*.map
