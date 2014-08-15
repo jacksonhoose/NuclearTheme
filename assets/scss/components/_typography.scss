@@ -1,10 +1,11 @@
-.list-unstyled {
-	list-style:none;
-	margin:0;
-	padding:0;
-}
+ul, ol {
+	
+	&.list-unstyled {
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
 
-ul {
 	&.list-inline {
 		> li {
 			@include inline-block;
@@ -40,9 +41,7 @@ h6, .h6 {
 	font-size:16px;
 }
 
-ul, ol {
 
-}
 
 .text-center {
 	text-align:center;
