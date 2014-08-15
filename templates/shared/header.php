@@ -11,17 +11,17 @@
 		<?php
 
 		$nav = [
-			'container' 		=> false,
-			'container_class' => 'menu cf',
-			'menu' 				=> __('Primary Menu', 'nuclear-theme'),
+			'container'			=> false,
+			'container_class'	=> 'menu cf',
+			'menu'				=> __('Primary Menu', 'nuclear-theme'),
 			'menu_class' 		=> 'nav top-nav cf',
 			'theme_location' 	=> 'main-nav',
-			'before' 			=> '',
-			'after' 				=> '',
-			'link_before' 		=> '',
-			'link_after' 		=> '',
-			'depth' 				=> 0,
-			'fallback_cb' 		=> ''
+			'before'				=> '',
+			'after'				=> '',
+			'link_before'		=> '',
+			'link_after'		=> '',
+			'depth'				=> 0,
+			'fallback_cb'		=> ''
 		];
 
 		wp_nav_menu($nav);
