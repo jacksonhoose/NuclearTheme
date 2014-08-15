@@ -13,7 +13,7 @@
  */.alignleft{float:left}.alignright{float:right}.aligncenter{display:block;margin:0 auto}/*!
  * component styles 
  * ie. site styles for global components
- */.list-unstyled{list-style:none;margin:0;padding:0}ul.inline-block>li{display:inline-block;vertical-align:middle}.h1,h1{font-size:36px}.h2,h2{font-size:30px}.h3,h3{font-size:24px}.h4,h4{font-size:20px}.h5,h5{font-size:18px}.h6,h6{font-size:16px}/*!
+ */.list-unstyled{list-style:none;margin:0;padding:0}ul.list-inline>li{display:inline-block;vertical-align:middle}.h1,h1{font-size:36px}.h2,h2{font-size:30px}.h3,h3{font-size:24px}.h4,h4{font-size:20px}.h5,h5{font-size:18px}.h6,h6{font-size:16px}/*!
  * Template specific styles
  *//*!
  * other media styles

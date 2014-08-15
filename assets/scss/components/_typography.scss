@@ -5,7 +5,7 @@
 }
 
 ul {
-	&.inline-block {
+	&.list-inline {
 		> li {
 			@include inline-block;
 		}
