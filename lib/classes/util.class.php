@@ -38,7 +38,7 @@ class Util {
 			$uri = get_permalink($uri);
 		}
 
-		return '<a href="' . $uri . '" title="Permalink to ' . $text .'" target="' . $target . '">' . $text . '</a>';
+		return self::wrap_in_html($text, 'a', ['href' => $uri, 'target' => $target]);
 	}
 
 }
