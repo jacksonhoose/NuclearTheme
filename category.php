@@ -1,5 +1,4 @@
 <?php Nuclear::render_template($header_templates); ?>
-
 	<?php if (have_posts()): ?>
 
 		<h2>Category Archive: <?php echo single_cat_title( '', false ); ?></h2>

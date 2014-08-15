@@ -11,8 +11,8 @@ class Breadcrumbs {
 		/*!
 		 * import global post and save variables on class
 		 */
-		global $post;
-		self::$post = $post;
+		global $wp_query;
+		self::$post = $wp_query->queried_object;
 		self::$breadcrumb_class = $breadcrumb_class;
 		self::$current_class = ['class' => $current_class];
 
@@ -34,6 +34,10 @@ class Breadcrumbs {
 			{
 				self::get_404_crumbs();
 			}
+			elseif(is_archive())
+			{
+				self::get_archive_crumbs();
+			}
 			elseif(is_page(self::$post->ID))
 			{
 				self::get_page_crumbs();
@@ -49,6 +53,8 @@ class Breadcrumbs {
 		 */
 		return self::wrap_list(self::$crumbs);
 	}
+
+
 
 	private static function get_home_crumbs()
 	{
@@ -68,6 +74,26 @@ class Breadcrumbs {
 	private static function get_single_crumbs()
 	{
 		self::$crumbs[] = self::get_link_list_item(self::$post->ID, null, self::$current_class);
+	}
+
+	private static function get_archive_crumbs()
+	{
+		if(self::$post->parent != 0)
+		{
+			$anc = get_ancestors(self::$post->term_id, self::$post->taxonomy);
+			$anc = array_reverse($anc);
+
+			foreach($anc as $ancestor)
+			{
+				$term = get_term_by('term_taxonomy_id', $ancestor, self::$post->taxonomy);
+				$term_link = get_term_link($ancestor, self::$post->taxonomy);
+				self::$crumbs[] = self::get_link_list_item($term_link, $term->name);
+			}
+		}
+
+		$term_link = get_term_link(self::$post->term_id, self::$post->taxonomy);
+		self::$crumbs[] = self::get_link_list_item($term_link, self::$post->name);
+
 	}
 
 	private static function get_page_crumbs()

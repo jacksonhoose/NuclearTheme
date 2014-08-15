@@ -1,7 +1,9 @@
 <?php
+
 /*!
  * This is a class that provides some misc helpers
  */
+
 class Nuclear {
 
 	/*!
