@@ -1,6 +1,6 @@
 <?php Nuclear::render_template($header_templates); ?>
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-	<?php echo Nuclear::breadcrumbs(); ?>
+
 		<article id="post-<?php the_ID(); ?>" <?php post_class('cf entry'); ?> role="article" itemscope>
 
 			<header class="article-header">
