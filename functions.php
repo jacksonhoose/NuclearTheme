@@ -8,13 +8,19 @@ include_once('lib/ajax.php');
 include_once('lib/shortcodes.php');
 include_once('lib/quicktags.php');
 include_once('lib/scripts.php');
-include_once('lib/utilities.php');
-include_once('lib/Nuclear.class.php');
 include_once('lib/widgets.php');
+
+/*!
+ * classes
+ */
+include_once('lib/classes/util.class.php');
+include_once('lib/classes/nuclear.class.php');
+include_once('lib/classes/breadcrumbs.class.php');
 
 /*!
  * wordpress global for max image size
  */
+
 if(!isset($content_width))
 {
 	$content_width = 1140;
