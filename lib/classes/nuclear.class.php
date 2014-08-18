@@ -30,8 +30,8 @@ class Nuclear {
 	{
 		if(is_array($posts))
 		{
-			foreach ($posts as $post) {
-
+			foreach ($posts as $post) 
+			{
 				$meta = get_post_custom($post->ID);
 
 				if($meta)
@@ -58,7 +58,8 @@ class Nuclear {
 	 */
 	public static function push_meta_into_post($post, $meta = [])
 	{
-		foreach ($meta as $key => $value) {
+		foreach ($meta as $key => $value) 
+		{
 			$post->$key = $value;
 		}
 
