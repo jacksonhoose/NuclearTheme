@@ -81,7 +81,6 @@ class Nuclear {
 		}
 
 		return true;
-
 	}
 
 	/*!

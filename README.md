@@ -5,3 +5,5 @@ A Wordpress boilerplate, combines features from other boilerplates that I've fou
 * Starkers (https://github.com/viewportindustries/starkers)
 * Bones (https://github.com/eddiemachado/bones)
 * Roots (https://github.com/roots/roots)
+
+## Requires PHP 5.4 or greater
