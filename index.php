@@ -32,4 +32,5 @@
 	<?php else: ?>
 		<h2>No posts to display</h2>
 	<?php endif; ?>
+	<?php echo Nuclear::pagination(); ?>
 <?php Nuclear::render_template($footer_templates); ?>

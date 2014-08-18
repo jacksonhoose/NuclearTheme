@@ -84,9 +84,17 @@ class Nuclear {
 
 	}
 
-	public static function breadcrumbs()
+	/*!
+	 * aliases to other classes
+	 */
+	public static function breadcrumbs($breadcrumb_class = 'breadcrumbs', $current_class = 'active')
 	{
-		return Breadcrumbs::generate();
+		return Breadcrumbs::generate($breadcrumb_class, $current_class);
+	}
+
+	public static function pagination($tag = 'ul', $classes = 'pagination list-unstyled list-inline')
+	{
+		return Pagination::generate($tag, $classes);
 	}
 
 }

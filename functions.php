@@ -16,6 +16,7 @@ include_once('lib/widgets.php');
 include_once('lib/classes/util.class.php');
 include_once('lib/classes/nuclear.class.php');
 include_once('lib/classes/breadcrumbs.class.php');
+include_once('lib/classes/pagination.class.php');
 
 /*!
  * wordpress global for max image size
