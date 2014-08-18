@@ -7,6 +7,7 @@ function nuclear_after_setup()
 	add_action('init', 'nuclear_cleanup_head');
 	add_action('init', 'nuclear_register_menus');
 	add_action('init', 'nuclear_post_types');
+	add_action('init', 'nuclear_taxonomies');
 
 	nuclear_theme_support();
 	nuclear_image_sizes();
@@ -55,6 +56,13 @@ function nuclear_post_types()
 	 */
 }
 
+function nuclear_taxonomies()
+{
+	/*!
+	 * register custom taxonomies
+	 */
+}
+
 function nuclear_cleanup_head()
 {
 	remove_action('wp_head', 'rsd_link');
@@ -64,4 +72,3 @@ function nuclear_cleanup_head()
 }
 
 add_action('after_setup_theme', 'nuclear_after_setup');
-
