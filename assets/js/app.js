@@ -19,7 +19,7 @@
 		exampleAjax: function() {
 			var response = Nuclear.microApi.get({
 				post_type: 'page',
-				posts_per_page: '-1'
+				posts_per_page: '1'
 			});
 
 			response.then(function(data) {

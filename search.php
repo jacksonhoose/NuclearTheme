@@ -10,7 +10,7 @@
 						</header>
 
 						<section class="entry-content">
-							<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'bonestheme' ) . '</span>' ); ?>
+							<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;' ) . '</span>' ); ?>
 						</section>
 					</article>
 				</li>
