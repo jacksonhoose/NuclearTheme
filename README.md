@@ -6,7 +6,7 @@ This is my opinionated Wordpress boilerplate that I personally use on all my pro
 ## Features:
 * Normalize.css
 * SCSS Support/Directory structure
-* Javascript minification/concatonation
+* Javascript minification/concatonation/linting
 * Image optimization
 * Gulp Task runner
 * Bower asset management
