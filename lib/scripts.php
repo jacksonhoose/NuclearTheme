@@ -29,7 +29,8 @@ function nuclear_scripts()
   wp_localize_script('app', 'Nuclear', array(
     'ajaxUri'   => admin_url('admin-ajax.php'),
     'siteUri'   => home_url(),
-    'themeUri'  => get_template_directory_uri()
+    'themeUri'  => get_template_directory_uri(),
+    'nonce'			=> wp_create_nonce('nuclear-nonce')
   ));
 
   /*!
@@ -72,6 +73,13 @@ function nuclear_twitter_init() { ?>
 
 <?php }
 add_action('wp_footer', 'nuclear_twitter_init', 50);
+
+function nuclear_favicon() { ?>
+
+  <link rel="shortcut icon" href="<?php echo THEME_URL; ?>/favicon.ico" />
+
+<?php }
+add_action('wp_head', 'nuclear_favicon', 0);
 
 /*!
  * Shim responsive for old browser

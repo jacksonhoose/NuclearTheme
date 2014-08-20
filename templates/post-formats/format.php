@@ -13,24 +13,22 @@
 	<section itemprop="articleBody" class="cf article-content">
 		<?php the_content(); ?>
 		<?php wp_link_pages([
-			'before'      => '<div class="page-links"><span class="page-links-title">' . __('Pages:') . '</span>',
-			'after'       => '</div>',
-			'link_before' => '<span>',
-			'link_after'  => '</span>',
-        ]); ?>
+				'before'      => '<div class="page-links"><span class="page-links-title">' . __('Pages:') . '</span>',
+				'after'       => '</div>',
+				'link_before' => '<span>',
+				'link_after'  => '</span>',
+      	]); ?>
 	</section>
 
 	<?php if (get_the_author_meta('description')): ?>
 		<aside>
-			<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
+			<?php echo get_avatar(get_the_author_meta('user_email')); ?>
 			<h3>About <?php echo get_the_author(); ?></h3>
 			<?php the_author_meta('description'); ?>
 		</aside>
 	<?php endif; ?>
 
-	<footer class="article-footer">
-
-	</footer>
+	<footer class="article-footer"></footer>
 
 	<?php comments_template(); ?>
 
