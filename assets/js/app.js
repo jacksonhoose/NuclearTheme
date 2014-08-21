@@ -10,7 +10,7 @@
 		init: function() {
 			console.log('init');
 			// uncomment to see sample ajax request
-			// this.exampleAjax();
+			this.exampleAjax();
 		},
 
 		/*!
@@ -33,28 +33,30 @@
 	 */
 	Nuclear.microApi = {
 		get: function(WP_Query) {
-			var deffered;
+			var request = function() {
+				var deffered = $.Deferred();
+				
+				$.ajax({
+					type: 'GET',
+					url: Nuclear.ajaxUri,
+					data: {
+						nonce: Nuclear.nonce,
+						action: 'nuclear_micro_api',
+						wp_query: WP_Query
+					}
+				}).success(function(data){
+					deffered.resolve(data);
+				}).error(function(err) {
+					deffered.reject(err);
+				});
+
+				return deffered.promise();
+			};
 
 			if(typeof WP_Query !== 'object')
 				return false;
 
-			deffered = $.Deferred();
-
-			$.ajax({
-				type: 'POST',
-				url: Nuclear.ajaxUri,
-				data: {
-					nonce: Nuclear.nonce,
-					action: 'nuclear_micro_api',
-					wp_query: WP_Query
-				}
-			}).success(function(data){
-				deffered.resolve(data);
-			}).error(function(err) {
-				deffered.reject(err);
-			});
-
-			return deffered.promise();
+			return request();
 		}
 	};
 

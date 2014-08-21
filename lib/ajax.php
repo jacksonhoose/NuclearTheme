@@ -14,22 +14,25 @@ function nuclear_micro_api()
 	/*!
 	 * Exit because the request isn't coming from the correct page / they have a bad nonce
 	 */
-	if (!wp_verify_nonce($_REQUEST['nonce'], 'nuclear-nonce'))
-	{
-		exit('There was an error.');
-	}
+	check_ajax_referer('nuclear-nonce', 'nonce');
 
 	/*!
 	 * Make sure they got here via ajax
 	 */
 	if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')
 	{
-		if(!$_REQUEST['wp_query']) {
+		/*!
+		 * make sure our special variable is present
+		 * probably want to do some othe filtering/tests
+		 */
+		if(!$_REQUEST['wp_query'] || isset($_REQUEST['wp_query']['post_status'])) {
 			exit('There was an error.');
 		}
 
-		$posts = Nuclear::get_posts($_REQUEST['wp_query']);
-		echo json_encode($posts);
+		/*!
+		 * return the query response
+		 */
+		echo json_encode(Nuclear::get_posts($_REQUEST['wp_query']));
 
 	}
 	else
