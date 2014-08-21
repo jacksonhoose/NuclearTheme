@@ -19,7 +19,8 @@
 		exampleAjax: function() {
 			var response = Nuclear.microApi.get({
 				post_type: 'page',
-				posts_per_page: '1'
+				posts_per_page: '1',
+				page_id: '7'
 			});
 
 			response.then(function(data) {
@@ -29,7 +30,7 @@
 	};
 
 	/*!
-	 * Example on how to use built in 'micro api'
+	 * Example on how to query from the frontend
 	 */
 	Nuclear.microApi = {
 		get: function(query) {
@@ -75,6 +76,6 @@
 		}
 	};
 
-	$(document).ready(UTIL.loadEvents);
+	$document.ready(UTIL.loadEvents);
 
 })(jQuery, window, document, undefined, Nuclear);
