@@ -1,5 +1,4 @@
 ul, ol {
-	
 	&.list-unstyled {
 		list-style:none;
 		margin:0;
@@ -14,7 +13,7 @@ ul, ol {
 }
 
 h1, h2, h3, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-
+	font-weight:600;
 }
 
 h1, .h1 {
@@ -41,7 +40,13 @@ h6, .h6 {
 	font-size:16px;
 }
 
+.text-white {
+	color:$white;
+}
 
+.text-black {
+	color:$black;
+}
 
 .text-center {
 	text-align:center;
@@ -53,4 +58,8 @@ h6, .h6 {
 
 .text-right {
 	text-align:right;
+}
+
+.uppercase {
+	text-transform:uppercase;
 }
