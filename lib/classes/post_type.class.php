@@ -93,6 +93,11 @@ class PostType {
 		];
 	}
 
+	/*!
+	 * takes a string and returns the slug version
+	 * @param  string $slug 
+	 * @return string
+	 */
 	public static function slugify ($slug)
 	{
 		$slug = preg_replace('~[^\\pL\d]+~u', '-', $slug);
@@ -109,36 +114,66 @@ class PostType {
 		return $slug;
 	}
 
+	/*!
+	 * get the slug from the current instance of the class
+	 * @return string
+	 */
 	public function get_slug ()
 	{
 		return self::slugify($this->name);
 	}
 
+	/*!
+	 * sets a key/value on the arguments array
+	 * @param string $key the key 
+	 * @param mixed $property the key value
+	 * @return void
+	 */
 	public function set_argument ($key, $property)
 	{
 		$this->args[$key] = $property;
 	}
 
+	/*!
+	 * sets the support key
+	 * @return void
+	 */
 	public function supports ($support = [])
 	{
 		$this->set_argument("supports", $support);
 	}
 
+	/*!
+	 * sets the archive key
+	 * @return void
+	 */
 	public function archive ($archive = false)
 	{
 		$this->set_argument("has_archive", $archive);
 	}
 
+	/*!
+	 * sets the rewrites key
+	 * @return void
+	 */
 	public function rewrites ($rewrite)
 	{
 		$this->set_argument("rewrite", $rewrite);
 	}
 
+	/*!
+	 * sets the capability_type key
+	 * @return void
+	 */
 	public function capability_type ($capability = "page")
 	{
 		$this->set_argument("capability_type", $capability);
 	}
 
+	/*!
+	 * registers the post type
+	 * @return void
+	 */
 	public function register ()
 	{
 		register_post_type($this->slug, $this->args);
